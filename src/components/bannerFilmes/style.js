@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableWithoutFeedbackBase } from "react-native";
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
 
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         fontSize:30,
         color: 'white',
         marginTop: 15,
-        marginLeft: -100,
+        marginLeft: -180,
         fontWeight:'bold'
 
     }
