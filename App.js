@@ -11,12 +11,23 @@ export default function App() {
       <Header></Header>
       <Search></Search>
       <BannerFilmes></BannerFilmes>
-      <FlatList
+
+     <View style = {{width:"90%"}}> 
+     <FlatList
+        horizontal = {true}
         data={Filmes}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <CardFilmes></CardFilmes>}
+        renderItem={({ item }) => (
+
+          <CardFilmes></CardFilmes>
+        )
+        
+        
+      }
 
       />
+     </View>
+    
     </View>
   );
 }

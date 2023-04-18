@@ -14,7 +14,7 @@ export default function CardFilmes() {
 
       <Text style = {styles.tituloFilmes}> A procura da Felicidade</Text>
 
-      <Text style = {styles.notaFilmes}>7.3</Text>
+      <Text style = {styles.notaFilmes}>{}</Text>
 
     </TouchableOpacity>
 
