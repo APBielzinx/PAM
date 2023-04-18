@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import BannerFilmes from './src/components/bannerFilmes';
 import Header from './src/components/header';
 import Search from './src/components/searchBar';
+import Filmes from './src/data/movies';
+
 
 
 export default function App() {
@@ -10,6 +12,13 @@ export default function App() {
      <Header></Header>
      <Search></Search>
      <BannerFilmes></BannerFilmes>
+     <FlatList
+     data = {Filmes}
+     
+     
+     />
+
+
     </View>
   );
 }

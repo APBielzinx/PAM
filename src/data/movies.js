@@ -72,7 +72,6 @@ const DATA =
         imagem: '14.jpg'
     }
 
-
-
-
 ]
+
+export default DATA;
