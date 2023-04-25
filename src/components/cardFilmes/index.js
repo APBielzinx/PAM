@@ -1,23 +1,31 @@
+
 import React from "react";
+
 import { Image, Text, TouchableOpacity } from "react-native";
-import styles from "./style";
+
+import styles from "./style";
 
 
-
-export default function CardFilmes() {
+export default function CardMovies({titulo,nota,imagem}) {
 
   return (
 
-    <TouchableOpacity style = {styles.containerFilmes}>
+    <TouchableOpacity style = {styles.containerFilmes}>
 
-      <Image style = {styles.imagemFilmes} source={require(`../../Img/6.jpg`)} />
+      <Image style = {styles.imagemFilmes} source={require(`../../Img/${imagem}`)} />
 
-      <Text style = {styles.tituloFilmes}> A procura da Felicidade</Text>
+      <Text style = {styles.tituloFilmes}> {titulo}</Text>
 
-      <Text style = {styles.notaFilmes}>{}</Text>
+      <Text style = {styles.notaFilmes}>{nota}</Text>
 
     </TouchableOpacity>
 
   );
 
 }
+
+
+
+
+
+
