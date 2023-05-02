@@ -12,7 +12,7 @@ return(
         </TouchableOpacity>
         
 
-        <Text style = {styles.textHeader}> TEC FILMES </Text>
+        <Text style = {styles.textHeader}> FashionLândia </Text>
 
     </View>
 )

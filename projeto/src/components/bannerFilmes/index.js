@@ -9,7 +9,7 @@ export default function BannerFilmes () {
 
     <>
     
-        <Text style = {styles.textBanner}> Em cartaz </Text>
+        <Text style = {styles.textBanner}> Novidades </Text>
 
         <Image style = {styles.imageBanner} source = {require(`../../Img/${imagem}.jpg`)} />
     

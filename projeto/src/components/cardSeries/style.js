@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
     height: 170,
 
     borderRadius: 8,
+
+    borderColor: "black",
   },
  
 });

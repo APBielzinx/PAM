@@ -2,41 +2,73 @@ const DATA =
 [
 
     {
-        id: '01',
-        nome: 'Karatê Kid',
+        id: '1',
+        nome: 'Calça Cargo',
+        nota: '8.8',
+        imagem: '1.jpg'
+    },
+
+
+    {
+        id: '2',
+        nome: 'Camisa Brasil',
+        nota: '8.8',
+        imagem: '2.jpg'
+    },
+
+
+    {
+        id: '3',
+        nome: 'Camisa Fofoca ',
+        nota: '8.8',
+        imagem: '3.jpg'
+    },
+
+
+    {
+        id: '4',
+        nome: 'Camisa Money ',
+        nota: '8.8',
+        imagem: '4.jpg'
+    },
+
+    {
+        id: '5',
+        nome: 'Jordan 3 ',
         nota: '8.8',
         imagem: '5.jpg'
     },
 
 
     {
-        id: '02',
-        nome: 'A Procura da Felicidade',
-        nota: '7.3',
+        id: '6',
+        nome: 'Jordan 4',
+        nota: '8.8',
         imagem: '6.jpg'
     },
 
+
     {
-        id: '03',
-        nome: 'Pânico 6',
-        nota: '8.5',
+        id: '7',
+        nome: 'Moletom Oversized',
+        nota: '8.8',
         imagem: '7.jpg'
     },
 
-    {
-        id: '04',
-        nome: 'As Branquelas',
-        nota: '7.0',
-        imagem: '8.jpg'
-    },
 
-    {
-        id: '05',
-        nome: 'A Cinco Passos de Você',
-        nota: '6.6',
-        imagem: '9.jpg'
-    },
 
+
+
+
+
+
+
+
+
+
+
+
+ 
     {
         id: '06',
         nome: 'A Princesa e o Sapo',

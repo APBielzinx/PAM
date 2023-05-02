@@ -32,6 +32,11 @@ export default function App() {
 
 
       <View style={{width:"90%"}}>
+<Text style = {{fontSize:25,
+                    color: 'white',
+                    fontWeight:'bold',
+                     marginRight: 75,
+                     textAlign:'center'}}> Em promoção</Text>
 
       <FlatList
 
@@ -71,7 +76,7 @@ export default function App() {
                     color: 'white',
                     fontWeight:'bold',
                      marginRight: 75,
-                     textAlign:'center'}}> Series</Text>
+                     textAlign:'center'}}> Mais comprados</Text>
 
 
       <FlatList
@@ -124,7 +129,7 @@ const styles = StyleSheet.create({
 
     flex: 1,
 
-    backgroundColor: "#141a29",
+    backgroundColor: "#643ee1",
 
     alignItems: "center",
 
