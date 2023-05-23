@@ -48,6 +48,10 @@ export default function CalcasPage() {
 
         imagem = {item.imagem}
 
+origem = {item.origem}
+
+tamanho = {item.tamanho}
+
         />
 
         )}
@@ -85,6 +89,10 @@ export default function CalcasPage() {
         preco= {item.preco}
 
         imagem = {item.imagem}
+
+origem = {item.origem}
+
+tamanho = {item.tamanho}
 
         />
 

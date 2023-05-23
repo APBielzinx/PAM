@@ -54,6 +54,10 @@ export default function TenisPage() {
 
         imagem = {item.imagem}
 
+origem = {item.origem}
+
+tamanho = {item.tamanho}
+
         />
 
         )}
@@ -90,6 +94,10 @@ export default function TenisPage() {
         preco= {item.preco}
 
         imagem = {item.imagem}
+
+origem = {item.origem}
+
+tamanho = {item.tamanho}
 
         />
 

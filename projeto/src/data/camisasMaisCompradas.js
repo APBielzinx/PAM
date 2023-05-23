@@ -4,6 +4,8 @@ const DATA = [
     nome: "Camisa Adidas 3 Listras Feminina",
     preco: "R$59,99",
     imagem: "10.jpg",
+    tamanho:'P M G GG',
+    origem:'Estrangeira'
   },
   {
     id: "01",
@@ -11,14 +13,14 @@ const DATA = [
     preco: "R$ 110,99",
     imagem: "11.jpg",
     tamanho: 'P M G GG',
-    origem: 'amarela',
+    origem:'Estrangeira'
   },
   {
     id: '2',
     nome: 'Camisa Brasil',
     preco: 'R$259,99',
     tamanho: 'P M G GG',
-    origem: 'amarela',
+    origem: 'Nacional',
     imagem: '2.jpg'
   },
 ];
