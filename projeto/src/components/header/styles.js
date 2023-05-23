@@ -15,7 +15,8 @@ textHeader:{
 fontSize:25,
 color: 'white',
 fontWeight:'bold',
-marginRight: 75
+marginRight: 75,
+marginRight:'300px'
 
 }
 

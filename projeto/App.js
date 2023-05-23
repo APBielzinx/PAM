@@ -1,138 +1,48 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, View } from "react-native";
 
-import BannerFilmes from "./src/components/bannerFilmes";
 
-import Filmes from "./src/data/movies";
+import Header from "./src/components/header";
 
-import Header from "./src/components/header";
+import Routes from "./src/routes";
 
-import SearchBar from "./src/components/searchbar";
-
-import CardMovies from "./src/components/cardFilmes";
-
-import CardSeries from "./src/components/cardSeries"
-
-import Series from "./src/data/series"
+import { NavigationContainer } from '@react-navigation/native'
 
 
 
-export default function App() {
+export default function App() {
 
-  return (
+      return (
 
-    <View style={styles.container}>
-
-      <Header></Header>
-
-      <SearchBar></SearchBar>
-
-      <BannerFilmes></BannerFilmes>
+            <View style={styles.container}>
+                  <NavigationContainer>
+                  <Header></Header>
+                  <Routes />
+                  </NavigationContainer>
 
 
 
-
-      <View style={{width:"90%"}}>
-<Text style = {{fontSize:25,
-                    color: 'white',
-                    fontWeight:'bold',
-                     marginRight: 75,
-                     textAlign:'center'}}> Em promoção</Text>
-
-      <FlatList
-
-      horizontal ={true}
-
-      showsHorizontalScrollIndicator={false}
-
-        data={Filmes}
-
-        keyExtractor={(item) => item.id}
-
-        renderItem={ ({item}) => (
-
-        
-
-        <CardMovies
-
-        
-
-        titulo = {item.nome}
-
-        nota = {item.nota}
-
-        imagem = {item.imagem}
-
-        />
-
-        )}
-
-      />
-
-      </View>
-
-      <View style={{width:"90%"}}>
-
-      <Text style = {{fontSize:25,
-                    color: 'white',
-                    fontWeight:'bold',
-                     marginRight: 75,
-                     textAlign:'center'}}> Mais comprados</Text>
+            </View>
 
 
-      <FlatList
-
-      horizontal ={true}
-
-      showsHorizontalScrollIndicator={false}
-
-        data={Series}
-
-        keyExtractor={(item) => item.id}
-
-        renderItem={ ({item}) => (
-
-        
-           
-
-
-        <CardSeries
-
-        
-
-        titulo = {item.nome}
-
-        nota = {item.nota}
-
-        imagem = {item.imagem}
-
-        />
-
-        )}
-
-      />
-
-      </View>
-
-
-    </View>
-
-  );
+      );
 
 }
 
 
 
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
-  container: {
+      container: {
 
-    flex: 1,
+            
+         
+            flex: 1,
 
-    backgroundColor: "#643ee1",
+            backgroundColor: "#643ee1",
 
-    alignItems: "center",
+     
 
-  },
+      },
 
 });
