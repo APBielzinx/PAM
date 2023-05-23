@@ -6,7 +6,7 @@ import { Image, Text, TouchableOpacity } from "react-native";
 import styles from "./style";
 
 
-export default function CardMovies({titulo,nota,imagem}) {
+export default function CardMovies({titulo,preco,imagem,origem,tamanho}) {
 
   return (
 
@@ -16,7 +16,16 @@ export default function CardMovies({titulo,nota,imagem}) {
 
       <Text style = {styles.tituloFilmes}> {titulo}</Text>
 
-      <Text style = {styles.notaFilmes}>{nota}</Text>
+    <Text style = {styles.notaFilmes}>Origem: {origem}</Text>
+
+      <Text style = {styles.notaFilmes}>Tamanho: {tamanho}</Text>
+
+      <Text style = {styles.notaFilmes}>{preco}</Text>
+
+  
+
+
+
 
     </TouchableOpacity>
 

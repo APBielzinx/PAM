@@ -1,71 +1,17 @@
 import { StyleSheet, Text, View, FlatList } from "react-native";
 
-
-import Filmes from "../../data/promocao";
-
-import CardMovies from "../cardFilmes";
-
 import CardSeries from "../cardSeries"
+import Calcas from "../../data/calcas"
+import CalcasMaisCompradas from "../../data/calcasMaisCompradas"
 
-import Series from "../../data/maisComprados";
 
-
-
-export default function Home() {
+export default function CalcasPage() {
 
   return (
 
     <View style={styles.container}>
 
-  
-
-
-
-
-
-      <View style={{width:"90%"}}>
-<Text style = {{fontSize:25,
-                    color: 'white',
-                    fontWeight:'bold',
-                     marginRight: 75,
-                     textAlign:'center'}}> Em promoção</Text>
-
-      <FlatList
-
-      horizontal ={true}
-
-      showsHorizontalScrollIndicator={false}
-
-        data={Filmes}
-
-        keyExtractor={(item) => item.id}
-
-        renderItem={ ({item}) => (
-
-        
-
-        <CardMovies
-
-        
-
-      
-        titulo = {item.nome}
-
-        preco= {item.preco}
-
-        imagem = {item.imagem}
-         
-origem = {item.origem}
-
-        tamanho = {item.tamanho}
-
-        />
-
-        )}
-
-      />
-
-      </View>
+ 
 
       <View style={{width:"90%"}}>
 
@@ -82,7 +28,7 @@ origem = {item.origem}
 
       showsHorizontalScrollIndicator={false}
 
-        data={Series}
+        data={CalcasMaisCompradas}
 
         keyExtractor={(item) => item.id}
 
@@ -96,16 +42,49 @@ origem = {item.origem}
 
         
 
-     
         titulo = {item.nome}
 
         preco= {item.preco}
 
         imagem = {item.imagem}
-         
-origem = {item.origem}
 
-        tamanho = {item.tamanho}
+        />
+
+        )}
+
+      />
+
+<Text style = {{fontSize:25,
+                    color: 'white',
+                    fontWeight:'bold',
+                     marginRight: 75,
+                     textAlign:'center'}}> Todos Produtos</Text>
+
+  <FlatList
+
+      horizontal ={true}
+
+      showsHorizontalScrollIndicator={false}
+
+        data={Calcas}
+
+        keyExtractor={(item) => item.id}
+
+        renderItem={ ({item}) => (
+
+        
+           
+
+
+        <CardSeries
+
+        
+
+        titulo = {item.nome}
+
+        preco= {item.preco}
+
+        imagem = {item.imagem}
 
         />
 
