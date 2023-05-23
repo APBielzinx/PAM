@@ -3,13 +3,17 @@ const DATA = [
     id: "02",
     nome: "Camisa Adidas 3 Listras Feminina",
     preco: "R$59,99",
-    imagem: "10.jpg"
+    imagem: "10.jpg",
+    tamanho:'P M G GG',
+    origem:'Estrangeira'
   },
   {
     id: "01",
     nome: "Top Cropped Adidas Feminino",
     preco: "R$ 110,99",
     imagem: "11.jpg",
+    tamanho:'P M G GG',
+    origem:'Estrangeira'
   },
   { id: "02", nome: "Calça Jeans Taper", preco: "R$139,90", imagem: "12.jpg",  tamanho: '36 até 52', origem: 'Nacional' },
   {
