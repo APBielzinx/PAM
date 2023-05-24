@@ -4,7 +4,7 @@ import { Image, Text, TouchableOpacity } from "react-native";
 
 import styles from "./style";
 
-export default function CardSeries({ titulo, preco, imagem, origem, tamanho }) {
+export default function CardItens({ titulo, preco, imagem, origem, tamanho }) {
   return (
     <TouchableOpacity style={styles.containerFilmes}>
       <Image

@@ -6,7 +6,7 @@ import { Image, Text, TouchableOpacity} from "react-native";
 import styles from "./style";
 
 
-export default function CardSeries({titulo,nota,imagem}) {
+export default function CardItens({titulo,nota,imagem}) {
 
   return (
 

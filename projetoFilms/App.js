@@ -10,7 +10,7 @@ import SearchBar from "./src/components/searchbar";
 
 import CardMovies from "./src/components/cardFilmes";
 
-import CardSeries from "./src/components/cardSeries"
+import CardItens from "./src/components/CardItens"
 
 import Series from "./src/data/series"
 
@@ -90,7 +90,7 @@ export default function App() {
            
 
 
-        <CardSeries
+        <CardItens
 
         
 
