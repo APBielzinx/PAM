@@ -5,7 +5,7 @@ import Home from "./pages/home/home";
 import Search from "./components/searchbar";
 
 
-import {Entypo, FontAwesome5,  MaterialCommunityIcons  } from '@expo/vector-icons'
+import {Entypo, FontAwesome5,  MaterialCommunityIcons, Ionicons  } from '@expo/vector-icons'
 import TenisPage from "./pages/tenis/tenis";
 import CalcasPage from "./pages/calcas/calcas";
 import CamisasPage from "./pages/camisas/camisas";
@@ -69,7 +69,7 @@ export default function Routes(){
                 tabBarIcon: ({size, color
                 
                 }) => (
-                    <FontAwesome5 name="tshirt" size={size} color={color}/>
+                    <Ionicons name="md-archive-sharp" size={size} color={color} />
                 )
             }}
             /> 
