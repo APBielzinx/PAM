@@ -84,8 +84,6 @@ export default function Routes(){
                 )
             }}
             /> 
-ve
-
 
         </Tab.Navigator>
     )
