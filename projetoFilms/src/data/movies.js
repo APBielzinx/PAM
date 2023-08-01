@@ -44,7 +44,7 @@ const DATA =
         imagem: '10.jpg'
     },
 
-    {
+  /*  {
         id: '07',
         nome: 'Vovozona',
         nota: '9.1',
@@ -71,7 +71,7 @@ const DATA =
         nota: '6.3',
         imagem: '14.jpg'
     }
-
+*/
 ]
 
 export default DATA;
