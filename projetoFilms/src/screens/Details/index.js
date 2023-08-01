@@ -26,11 +26,11 @@ return(
     emptyStar={<Icon name={'star-outline'} style={[styles.myStarStyle, styles.myEmptyStarStyle]}/>}
     halfStar={<Icon name={'star-half'} style={[styles.myStarStyle]}/>}
   />
-     <Text style={styles.text}>
+     <Text style={styles.textNota}>
                {route.params.nota}
                </Text>
 
-     <Text style={styles.text}>
+     <Text style={styles.textTitulo}>
                {route.params.titulo}
          </Text>
             
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
          textAlign:'right'
       },
       textTitulo:{
+          marginRight:500,
         fontSize:25,
         color: 'white',
         fontWeight:'bold',
