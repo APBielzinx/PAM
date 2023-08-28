@@ -1,20 +1,22 @@
 import React from "react";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack'; // Adicione esta importação
+import Details from "./pages/Details";
 import Home from "./pages/home/home";
 import Search from "./components/searchbar";
-
-
-import {Entypo, FontAwesome5,  MaterialCommunityIcons, Ionicons  } from '@expo/vector-icons'
+import { Entypo, FontAwesome5,  MaterialCommunityIcons, Ionicons  } from '@expo/vector-icons';
 import TenisPage from "./pages/tenis/tenis";
 import CalcasPage from "./pages/calcas/calcas";
 import CamisasPage from "./pages/camisas/camisas";
 
-const Tab = createBottomTabNavigator();
 
-export default function Routes(){
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator(); 
+
+export function RoutesMenu(){
     return(
-        <Tab.Navigator
+        <Tab.Navigator 
         screenOptions={{
             tabBarStyle:{
               backgroundColor:'#000000',
@@ -86,5 +88,17 @@ export default function Routes(){
             /> 
 
         </Tab.Navigator>
+
+        
     )
 }
+export function Routes() {
+    return (
+        <NavigationContainer independent={true}>
+      <Stack.Navigator initialRouteName="Home">
+     <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="details" component={Details} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    );
+  }

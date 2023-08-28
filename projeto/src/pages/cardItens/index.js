@@ -4,9 +4,14 @@ import { Image, Text, TouchableOpacity } from "react-native";
 
 import styles from "./style";
 
+import { useNavigation } from "@react-navigation/core";
+
+
 export default function CardItens({ titulo, preco, imagem, origem, tamanho }) {
+  const navigation = useNavigation()
+
   return (
-    <TouchableOpacity style={styles.containerFilmes}>
+    <TouchableOpacity onPress ={() => navigation.navigate('Details' , {titulo:titulo , imagem:imagem, preco:preco, origem:origem, tamanho:tamanho})} style={styles.containerFilmes}>
       <Image
         style={styles.imagemFilmes}
         source={require(`../../Img/${imagem}`)}
