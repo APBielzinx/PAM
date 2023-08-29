@@ -15,20 +15,20 @@ return(
     <View style = {styles.container}>
      <ScrollView>
 
-                 <Image style = {styles.image} source={require(`../../Img/${route.params.imagem}`)} />
+                <Image style = {styles.image} source={require(`../../Img/${route.params.imagem}`)}/>
       
      <Text style={styles.textNota}>
      {route.params.titulo}
-               </Text>
+    </Text>
      <Text style={styles.textTitulo}>
      {route.params.origem}
-         </Text>
-         <Text style={styles.textTitulo}>
+    </Text>
+    <Text style={styles.textTitulo}>
      {route.params.tamanho}
-         </Text>
-         <Text style={styles.textTitulo}>
+    </Text>
+    <Text style={styles.textTitulo}>
      {route.params.preco}
-         </Text>
+    </Text>
             
              
           
@@ -38,17 +38,13 @@ return(
 
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
-      container: {
-    
-        flex: 1,
-    
-        backgroundColor: "#141a29",
-    
-        alignItems: "center",
-    
-      },
+    container: {
+        flex: 1,
+        backgroundColor:"#643ee1",
+        alignItems:"center",
+    },
     myStarStyle: {
         marginTop:10,
         color: 'yellow',
@@ -61,28 +57,27 @@ const styles = StyleSheet.create({
       myEmptyStarStyle: {
         color: 'white',
       },
-
       textNota:{
         fontSize:25,
         color: 'white',
         fontWeight:'bold',
-         marginRight: 75,
-         textAlign:'right'
+        marginRight: 55,
+        textAlign:'left',
       },
       textTitulo:{
-          marginRight:500,
+        marginRight:500,
         fontSize:25,
         color: 'white',
         fontWeight:'bold',
-         marginRight: 75,
-         textAlign:'right'
+        marginRight: 55,
+        textAlign:'left'
+        
       },
-
       image:{
-        width:'90%',
+        width:'100%',
         height:400,
         marginTop:15,
-        borderRadius:10
+        borderRadius:5
     },
 
 }
