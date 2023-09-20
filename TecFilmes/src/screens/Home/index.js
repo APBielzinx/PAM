@@ -20,7 +20,7 @@ export default function App() {
             async function getMovies(){
 
                   try{
-                  const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=c779df891263abb52e98bb7f97cf7466&language=pt-BR");
+                  const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=6eb989e820d6b3fd6db74ae54f7c5c2e&language=pt-BR");
                   const data = await response.json();
 
                   console.log(data.results)
@@ -42,7 +42,7 @@ export default function App() {
             async function getSeries(){
 
                   try{
-                  const response = await fetch("https://api.themoviedb.org/3/tv/popular?api_key=c779df891263abb52e98bb7f97cf7466&language=pt-BR");
+                  const response = await fetch("https://api.themoviedb.org/3/tv/popular?api_key=6eb989e820d6b3fd6db74ae54f7c5c2e&language=pt-BR");
                   const data = await response.json();
 
                   console.log(data.results)
