@@ -73,13 +73,12 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
          textAlign:'center'
       },
-      textTitulo:{
-        fontSize:20,
+      textTitulo: {
+        fontSize: 24, 
         color: 'white',
-        fontWeight:'bold',
-         marginRight: 230,
-         textAlign:'left',
-         marginTop:30,
+        fontWeight: 'bold',
+        textAlign: 'center', 
+        marginBottom: 10, 
       },
       textSinopse: {
         fontSize: 16,
