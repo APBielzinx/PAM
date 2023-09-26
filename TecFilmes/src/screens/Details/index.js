@@ -34,6 +34,7 @@ return(
                {route.params.titulo}
          </Text>
             
+         {route.params.sinopse && <Text style={styles.textSinopse}>{route.params.sinopse}</Text>}
              
           
 
@@ -79,6 +80,14 @@ const styles = StyleSheet.create({
          marginRight: 230,
          textAlign:'left',
          marginTop:30,
+      },
+      textSinopse: {
+        fontSize: 16,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center', 
+        marginHorizontal: 20, 
+        marginTop: 20,
       },
 
       image:{

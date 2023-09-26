@@ -88,6 +88,7 @@ export default function App() {
       imagem = {item.poster_path}        
       titulo = {item.title}
       nota = {item.vote_average}
+      sinopse = {item.overview}
         />
 
         )}
@@ -101,7 +102,7 @@ export default function App() {
       <Text style = {{fontSize:25,
                     color: 'white',
                     fontWeight:'bold',
-                     textAlign:'center'}}> Series</Text>
+                     textAlign:'center'}}> Séries</Text>
 
 
       <FlatList
@@ -127,6 +128,7 @@ export default function App() {
         imagem = {item.poster_path}        
       titulo = {item.name}
       nota = {item.vote_average}
+      sinopse = {item.overview}
 
         />
 
