@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, TouchableOpacity} from "react-native";
 import BannerFilmes from "../../components/bannerFilmes";
 import Filmes from "../../data/movies"
 import Header from "../../components/header";
@@ -7,10 +7,13 @@ import CardMovies from "../../components/cardFilmes";
 import CardItens from "../../components/cardSeries/index";
 import Series from "../../data/series"
 import React,{useState,useEffect} from "react";
+import {useNavigation} from '@react-navigation/native';
+
 
 
 
 export default function App() {
+      const navigation = useNavigation();
 
       const [movies,setMovies] = useState([]);
 
@@ -58,6 +61,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+
+      <TouchableOpacity onPress={ () => navigation.navigate('Delete')}>salve</TouchableOpacity>
+
       <Header></Header>
 
       <SearchBar></SearchBar>
