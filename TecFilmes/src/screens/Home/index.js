@@ -65,7 +65,7 @@ export default function App() {
       
 
       <Header></Header>
-<TouchableOpacity onPress={ () => navigation.navigate('Delete')}>salve</TouchableOpacity>
+<TouchableOpacity onPress={ () => navigation.navigate('Delete')} style={{backgroundColor: '#fff', width: 60, fontSize: 20, marginLeft: 250, marginTop: -23, borderRadius: 10, padding:5}}>Renda</TouchableOpacity>
 
       <SearchBar></SearchBar>
 
