@@ -17,7 +17,7 @@ const TabelaDeDados = () => {
         <Row
           data={tableHead}
           style={styles.head}
-          textStyle={styles.text}
+          textStyle={styles.text2}
         />
         <Rows data={tableData} textStyle={styles.text} />
       </Table>
@@ -26,9 +26,10 @@ const TabelaDeDados = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+  container: { flex: 1, padding: 16, paddingTop: 30},
   head: { height: 40, backgroundColor: '#f1f8ff' },
-  text: { margin: 6 },
+  text: { margin: 6 , color:'#fff'},
+  text2: {margin: 6, color:'#000'}
 });
 
 export default TabelaDeDados;
