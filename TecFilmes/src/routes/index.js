@@ -21,7 +21,7 @@ return(
             }/>
           <stack.Screen name = 'details' component = {Details}/>
           
-          <stack.Screen name = 'delete' component = {Delete}/>
+          <stack.Screen name = 'Delete' component = {Delete}/>
         </stack.Navigator>
     </NavigationContainer>
 

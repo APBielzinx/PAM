@@ -1,36 +1,36 @@
-import { StyleSheet} from "react-native";
+import React from "react";
+import { View, StyleSheet } from "react-native";
 import Table from '../../components/tabela';
 
 
 
 
-export default function App() {
+export default function Delete() {
 
-  return (
+ return(
 
-    <View style={styles.container}>
+    <View style={styles.container}>
 
     <Table></Table>
 
     </View>
 
-  );
+);
 
 }
 
 
 
 
-const styles = StyleSheet.create({
+const styles=StyleSheet.create({
 
-  container: {
+container:{
 
-    flex: 1,
+ flex:1,
 
-    backgroundColor: "#141a29",
+ backgroundColor:"#141a29",
 
-    alignItems: "center",
-
-  },
+ alignItems:"center",
+},
 
 });

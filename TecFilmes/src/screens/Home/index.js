@@ -62,9 +62,10 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <TouchableOpacity onPress={ () => navigation.navigate('Delete')}>salve</TouchableOpacity>
+      
 
       <Header></Header>
+<TouchableOpacity onPress={ () => navigation.navigate('Delete')}>salve</TouchableOpacity>
 
       <SearchBar></SearchBar>
 
