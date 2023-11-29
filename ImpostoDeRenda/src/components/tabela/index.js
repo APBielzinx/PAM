@@ -4,18 +4,82 @@ import { Table, Row, Rows } from 'react-native-table-component';
 import Icon from 'react-native-vector-icons/FontAwesome'; // Importe o ícone desejado
 
 const TabelaDeDados = () => {
-  const [tableData, setTableData] = useState([
-    { id: '1', nome: 'João', cpf: '123.456.789-00', renda: 'R$ 1500,00' },
-    { id: '2', nome: 'Maria', cpf: '987.654.321-00', renda: 'R$ 2000,00' },
-    { id: '3', nome: 'Carlos', cpf: '111.222.333-44', renda: 'R$ 1800,00' },
-  ]);
-
+  const [tableData, setTableData] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [editedPerson, setEditedPerson] = useState({ id: '', nome: '', cpf: '', renda: '' });
   const [newPerson, setNewPerson] = useState({ id: '', nome: '', cpf: '', renda: '' }); // Novo estado para adição
   const [isEditing, setIsEditing] = useState(false);
 
   const tableHead = ['ID', 'Nome', 'CPF', 'Renda'];
+
+
+  const apiUrl = "http://localhost/pw/calculadoraImpostoDeRenda/controller/pessoa.php";
+  React.useEffect(() => {
+    getDataFromApi();
+  }, []);
+
+// Função para fazer uma solicitação GET para a API
+const getDataFromApi = async () => {
+  try {
+    const response = await fetch("http://localhost/pw/calculadoraImpostoDeRenda/controller/pessoa.php");
+    const data = await response.json();
+    console.log("Dados recebidos:", data);
+    setTableData(data); // Define os dados da API na tabela
+  } catch (error) {
+    console.error("Erro ao buscar dados:", error);
+  }
+};
+
+// Função para fazer uma solicitação POST para a API
+const postDataToApi = async (data) => {
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const responseData = await response.json();
+    console.log("Dados enviados e resposta recebida:", responseData);
+    // Faça algo com a resposta recebida, se necessário
+  } catch (error) {
+    console.error("Erro ao enviar dados:", error);
+  }
+};
+
+// Função para fazer uma solicitação PUT para a API
+const putDataToApi = async (id, newData) => {
+  try {
+    const response = await fetch(`${apiUrl}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newData),
+    });
+    const responseData = await response.json();
+    console.log("Dados atualizados e resposta recebida:", responseData);
+    // Faça algo com a resposta recebida, se necessário
+  } catch (error) {
+    console.error("Erro ao atualizar dados:", error);
+  }
+};
+
+// Exemplo de como usar essas funções em seu código:
+
+// Para fazer uma solicitação GET
+getDataFromApi();
+
+// Para fazer uma solicitação POST com dados de exemplo
+const exemploDadosPost = { nome: "Exemplo", cpf: "12345678900", renda: 2000 };
+postDataToApi(exemploDadosPost);
+
+// Para fazer uma solicitação PUT com ID e novos dados de exemplo
+const exemploIdParaAtualizar = 1;
+const exemploNovosDados = { nome: "Novo Nome", renda: 2500 };
+putDataToApi(exemploIdParaAtualizar, exemploNovosDados);
+
 
   const handleEdit = (index) => {
     setIsEditing(true);
@@ -62,19 +126,8 @@ const TabelaDeDados = () => {
 
   const renderTableRows = () => {
     return tableData.map((rowData, index) => (
-      <View key={index} style={styles.rowContainer}>
-        <TouchableOpacity style={styles.rowContent} onPress={() => handleEdit(index)}>
-          <Rows data={[Object.values(rowData)]} textStyle={styles.text} />
-        </TouchableOpacity>
-        <View style={styles.iconContainer}>
-          <TouchableOpacity onPress={() => handleEdit(index)}>
-            <Icon name={editingIndex === index ? 'check' : 'pencil'} size={20} color="white" />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => handleDelete(index)}>
-            <Icon name="trash" size={20} color="white" />
-          </TouchableOpacity>
-        </View>
-      </View>
+    <Row data={[rowData.id, rowData.nome, rowData.cpf, rowData.renda]} style={styles.text} />
+
     ));
   };
 
@@ -129,7 +182,6 @@ const TabelaDeDados = () => {
   );
 };
 
-// ... (código anterior)
 
 const styles = StyleSheet.create({
   container: { flexGrow: 1, padding: 16, paddingTop: 30 },
