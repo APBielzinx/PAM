@@ -1,35 +1,65 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Table, Row, Rows } from 'react-native-table-component';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { DataTable } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import {useNavigation} from '@react-navigation/native';
 
-const TabelaDeDados = () => {
-  const tableHead = ['ID', 'Nome', 'CPF', 'Renda'];
-  const tableData = [
-    ['1', 'João', '123.456.789-00', 'R$ 1500,00'],
-    ['2', 'Maria', '987.654.321-00', 'R$ 2000,00'],
-    ['3', 'Carlos', '111.222.333-44', 'R$ 1800,00'],
-    // Adicione mais linhas conforme necessário
+const TabelaCliente = () => {
+  const data = [
+    { id: 1, nome: 'João', cpf: '123.456.789-00', renda: 5000 },
+    { id: 2, nome: 'Maria', cpf: '987.654.321-00', renda: 6000 },
+    // Adicione mais dados conforme necessário
   ];
 
+  const handleEditar = (id) => {
+    // Lógica para editar o item com o ID fornecido
+    console.log(`Editar item com ID ${id}`);
+  };
+
+  const handleExcluir = (id) => {
+    // Lógica para excluir o item com o ID fornecido
+    console.log(`Excluir item com ID ${id}`);
+  };
+
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
-      <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
-        <Row
-          data={tableHead}
-          style={styles.head}
-          textStyle={styles.text2}
-        />
-        <Rows data={tableData} textStyle={styles.text} />
-      </Table>
+    <View>
+      <DataTable style={{backgroundColor: '#FFF', width: 400, marginTop: 50, fontsize: 10}}>
+        <DataTable.Header>
+          <DataTable.Title>ID</DataTable.Title>
+          <DataTable.Title>Nome</DataTable.Title>
+          <DataTable.Title>CPF</DataTable.Title>
+          <DataTable.Title>Renda</DataTable.Title>
+          <DataTable.Title>Editar</DataTable.Title>
+          <DataTable.Title>Excluir</DataTable.Title>
+        </DataTable.Header>
+
+        {data.map((item) => (
+          <DataTable.Row key={item.id} style={{width: 410}}>
+            <DataTable.Cell>{item.id}</DataTable.Cell>
+            <DataTable.Cell>{item.nome}</DataTable.Cell>
+            <DataTable.Cell>{item.cpf}</DataTable.Cell>
+            <DataTable.Cell>{item.renda}</DataTable.Cell>
+            <DataTable.Cell>
+              <TouchableOpacity>
+                <Ionicons name="pencil-outline" size={24} color="black" />
+              </TouchableOpacity>
+            </DataTable.Cell>
+            <DataTable.Cell>
+              <TouchableOpacity onPress={() => handleExcluir(item.id)}>
+                <Ionicons name="trash-outline" size={24} color="red" />
+              </TouchableOpacity>
+            </DataTable.Cell>
+          </DataTable.Row>
+        ))}
+      </DataTable>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, paddingTop: 30},
-  head: { height: 40, backgroundColor: '#f1f8ff' },
-  text: { margin: 6 , color:'#fff'},
-  text2: {margin: 6, color:'#000'}
-});
 
-export default TabelaDeDados;
+
+export default TabelaCliente;
