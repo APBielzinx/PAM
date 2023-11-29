@@ -126,11 +126,16 @@ putDataToApi(exemploIdParaAtualizar, exemploNovosDados);
 
   const renderTableRows = () => {
     return tableData.map((rowData, index) => (
-    <Row data={[rowData.id, rowData.nome, rowData.cpf, rowData.renda]} style={styles.text} />
-
+      <Row data={[rowData.id, rowData.nome, rowData.cpf, rowData.renda]}>
+        <TouchableOpacity onPress={() => handleEdit(index)}>
+          <Text>Editar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleDelete(index)}>
+          <Text>Excluir</Text>
+        </TouchableOpacity>
+      </Row>
     ));
   };
-
   const renderEditSection = () => {
     return editingIndex !== null && (
       <View style={styles.inputContainer}>
